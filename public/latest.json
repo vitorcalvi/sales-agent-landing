@@ -1,0 +1,8 @@
+{
+  "versionCode": 10008,
+  "versionName": "1.0.8",
+  "apkUrl": "https://github.com/vitorcalvi/sales-agent-releases/releases/latest/download/app-release.apk",
+  "minSupportedVersion": 1,
+  "forceUpdate": false,
+  "releaseNotes": "Logo standardization, two-step delete, cancel anytime, subscription UI polish"
+}

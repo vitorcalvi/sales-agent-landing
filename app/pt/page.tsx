@@ -24,6 +24,7 @@ export default function HomePage() {
               Ver Como Funciona
             </a>
           </div>
+          <p className="text-sm text-gray-500 mt-4">Versão 1.0.8</p>
         </div>
       </section>
 
@@ -115,6 +116,7 @@ export default function HomePage() {
             >
               Baixar APK
             </a>
+            <p className="text-sm text-gray-500 mt-4">Versão 1.0.8</p>
           </div>
         </div>
       </section>

@@ -1,3 +1,5 @@
+import PricingTable from "../components/PricingTable";
+
 export default function HomePage() {
   return (
     <div className="pt-24 overflow-x-hidden">
@@ -228,100 +230,58 @@ export default function HomePage() {
       </section>
 
       {/* Free vs Premium Section */}
-      <section className="section bg-dark-surface-low/30 border-y border-dark-border">
+      <PricingTable
+        title="Escolha Sua Escala"
+        description="Comece com nosso plano gratuito ou desbloqueie o poder total com o Premium."
+        features={[
+          { name: "Contatos Diários", freeValue: "10 contatos/dia", premiumValue: "Ilimitado", highlight: true },
+          { name: "Mensagens Diárias", freeValue: "40 mensagens/dia", premiumValue: "Ilimitado", highlight: true },
+          { name: "Pipeline de Vendas", freeValue: "3 Estágios Básicos", premiumValue: "Motor de 6 Estágios", highlight: true },
+          { name: "Scripts por IA", isLocked: true, freeValue: "", premiumValue: "" },
+          { name: "Previews de VSL", isLocked: true, freeValue: "", premiumValue: "" },
+          { name: "Escalabilidade em Lote", isLocked: true, freeValue: "", premiumValue: "" },
+          { name: "Branding", freeValue: "CTA Padrão", premiumValue: "CTA Profissional/Curto" },
+        ]}
+        monthlyPrice="US$ 9,99"
+        yearlyPrice="US$ 99,99"
+        trialDays={7}
+        locale="pt"
+      />
+
+      {/* Security & Privacy Section */}
+      <section className="section border-t border-dark-border bg-dark-surface-low/20">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading mb-4 tracking-tight">Escolha Sua Escala</h2>
+            <h2 className="text-4xl md:text-5xl font-heading mb-4 tracking-tight">Segurança de Nível Empresarial</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto font-sans">
-              Comece com nosso plano gratuito ou desbloqueie o poder total com o Premium.
+              Projetado para profissionais que exigem 100% de privacidade e controle total sobre seus dados.
             </p>
           </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[600px]">
-              <thead>
-                <tr className="border-b border-dark-border">
-                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest">Recurso</th>
-                  <th className="py-4 px-6 font-heading text-gray-400 uppercase text-sm tracking-widest">Plano Grátis</th>
-                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest bg-primary/5">Plano Premium (US$ 9,99/mês ou US$ 99,99/ano)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Contatos Diários</td>
-                  <td className="py-6 px-6 text-gray-400 font-mono">10 contatos/dia</td>
-                  <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Ilimitado</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Mensagens Diárias</td>
-                  <td className="py-6 px-6 text-gray-400 font-mono">40 mensagens/dia</td>
-                  <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Ilimitado</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Pipeline de Vendas</td>
-                  <td className="py-6 px-6 text-gray-400">3 Estágios Básicos</td>
-                  <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Motor de 6 Estágios</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Scripts por IA</td>
-                  <td className="py-6 px-6 text-gray-500">🔒 Bloqueado</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">✅ Acesso Total</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Previews de VSL</td>
-                  <td className="py-6 px-6 text-gray-500">🔒 Bloqueado</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">✅ Acesso Total</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Escalabilidade em Lote</td>
-                  <td className="py-6 px-6 text-gray-500">🔒 Bloqueado</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">✅ Acesso Total</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Branding</td>
-                  <td className="py-6 px-6 text-gray-400">CTA Padrão</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">CTA Profissional</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-gray-400 font-mono text-sm uppercase tracking-widest mb-6">Experimente primeiro</p>
-            <div className="inline-block px-8 py-3 bg-primary/10 border border-primary/20 rounded-full text-primary font-heading text-xl">
-              7 Dias de Teste Grátis Inclusos
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 bg-dark-bg border border-dark-border rounded-2xl hover:border-primary/30 transition-all text-center md:text-left">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="text-xl font-heading mb-2">100% Privado e Local</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                O agente roda <strong>inteiramente no seu dispositivo Android</strong>. Seus contatos, mensagens e scripts nunca saem do seu hardware. Sem armazenamento em nuvem, sem servidores de terceiros.
+              </p>
+            </div>
+            <div className="p-8 bg-dark-bg border border-dark-border rounded-2xl hover:border-primary/30 transition-all text-center md:text-left">
+              <div className="text-3xl mb-4">🛡️</div>
+              <h3 className="text-xl font-heading mb-2">Cofre Local Seguro</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Utiliza <strong>EncryptedSharedPreferences</strong> e criptografia AES-256 para proteger seus dados de campanha e credenciais de licença contra acessos não autorizados.
+              </p>
+            </div>
+            <div className="p-8 bg-dark-bg border border-dark-border rounded-2xl hover:border-primary/30 transition-all text-center md:text-left">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="text-xl font-heading mb-2">Automação Nativa</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Opera através da <strong>API de Acessibilidade do Android</strong>, mimetizando a interação humana diretamente na interface do WhatsApp, sem usar APIs não oficiais de alto risco.
+              </p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Technical Stack */}
-      <section className="section border-t border-dark-border bg-dark-surface-low/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading mb-4">Stack Tecnológica</h2>
-            <p className="text-gray-400 font-mono text-sm uppercase tracking-widest">Construído para Confiabilidade e Escala</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <TechItem 
-              label="Android" 
-              value="Kotlin, Jetpack Compose, Coroutines (Flow/StateFlow), Accessibility Service API" 
-            />
-            <TechItem 
-              label="Automação" 
-              value="WhatsAppAutomator (Node-ID Determinístico & Interação por Texto)" 
-            />
-            <TechItem 
-              label="Segurança" 
-              value="EncryptedSharedPreferences, Validação de Licença HMAC-SHA256" 
-            />
-            <TechItem 
-              label="Backend" 
-              value="Next.js (TypeScript), PostgreSQL (Supabase), Stripe & Play Store Billing" 
-            />
-          </div>
-        </div>
-      </section>
-
       {/* License Section */}
       <section className="py-12 border-t border-dark-border text-center text-gray-600 text-[10px] font-mono uppercase tracking-widest bg-dark-bg">
         <div className="container mx-auto">
@@ -363,7 +323,9 @@ export default function HomePage() {
 function Pillar({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="text-left p-6 bg-dark-surface-low border border-dark-border rounded-2xl">
-      <div className="text-primary font-mono text-xs uppercase tracking-widest mb-4">// {title}</div>
+      <div className="text-primary font-mono text-xs uppercase tracking-widest mb-4">
+        {title}
+      </div>
       <h3 className="text-2xl font-heading mb-4 text-white">{title}</h3>
       <p className="text-gray-400 font-sans leading-relaxed text-sm">{desc}</p>
     </div>

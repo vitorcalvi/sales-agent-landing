@@ -1,3 +1,5 @@
+import PricingTable from "../components/PricingTable";
+
 export default function HomePage() {
   return (
     <div className="pt-24 overflow-x-hidden">
@@ -97,12 +99,12 @@ export default function HomePage() {
                  <img src="/UI3.png" alt="Sales Pipeline" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
                     <span className="text-white font-heading text-xl">Sales Pipeline</span>
-                 </div>
+                  </div>
               </div>
                <div className="text-center mt-6">
                  <h3 className="text-xl font-heading text-white mb-2">Script Engine</h3>
                  <p className="text-sm text-gray-400">Deterministic sales logic</p>
-              </div>
+               </div>
             </div>
 
             {/* UI2 Screen */}
@@ -112,12 +114,12 @@ export default function HomePage() {
                  <img src="/UI2.png" alt="Execution" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
                     <span className="text-white font-heading text-xl">Active Execution</span>
-                 </div>
+                  </div>
               </div>
                <div className="text-center mt-6">
                  <h3 className="text-xl font-heading text-white mb-2">Execution Radar</h3>
                  <p className="text-sm text-gray-400">Live process monitoring</p>
-              </div>
+               </div>
             </div>
 
           </div>
@@ -228,96 +230,55 @@ export default function HomePage() {
       </section>
 
       {/* Free vs Premium Section */}
-      <section className="section bg-dark-surface-low/30 border-y border-dark-border">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading mb-4 tracking-tight">Choose Your Scale</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto font-sans">
-              Start with our generous free tier or unlock the full power with Premium.
-            </p>
-          </div>
+      <PricingTable
+        title="Choose Your Scale"
+        description="Start with our generous free tier or unlock the full power with Premium."
+        features={[
+          { name: "Daily Contacts", freeValue: "10 contacts/day", premiumValue: "Unlimited", highlight: true },
+          { name: "Daily Messages", freeValue: "40 messages/day", premiumValue: "Unlimited", highlight: true },
+          { name: "Sales Pipeline", freeValue: "3 Basic Stages", premiumValue: "Full 6-Stage Engine", highlight: true },
+          { name: "AI Scripting", isLocked: true, freeValue: "", premiumValue: "" },
+          { name: "VSL Previews", isLocked: true, freeValue: "", premiumValue: "" },
+          { name: "Batch Scaling", isLocked: true, freeValue: "", premiumValue: "" },
+          { name: "Branding", freeValue: "Standard CTA", premiumValue: "Professional/Short CTA" },
+        ]}
+        monthlyPrice="$9.99"
+        yearlyPrice="$99.99"
+        trialDays={7}
+        locale="en"
+      />
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[600px]">
-              <thead>
-                <tr className="border-b border-dark-border">
-                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest">Feature</th>
-                  <th className="py-4 px-6 font-heading text-gray-400 uppercase text-sm tracking-widest">Free Tier</th>
-                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest bg-primary/5">Premium Tier ($9.99/mo or $99.99/yr)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Daily Contacts</td>
-                  <td className="py-6 px-6 text-gray-400 font-mono">10 contacts/day</td>
-                  <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Unlimited</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Daily Messages</td>
-                  <td className="py-6 px-6 text-gray-400 font-mono">40 messages/day</td>
-                  <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Unlimited</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Sales Pipeline</td>
-                  <td className="py-6 px-6 text-gray-400">3 Basic Stages</td>
-                  <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Full 6-Stage Engine</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">AI Scripting</td>
-                  <td className="py-6 px-6 text-gray-500">🔒 Locked</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">✅ Full Access</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">VSL Previews</td>
-                  <td className="py-6 px-6 text-gray-500">🔒 Locked</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">✅ Full Access</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Batch Scaling</td>
-                  <td className="py-6 px-6 text-gray-500">🔒 Locked</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">✅ Full Access</td>
-                </tr>
-                <tr className="border-b border-dark-border/50">
-                  <td className="py-6 px-6 font-heading">Branding</td>
-                  <td className="py-6 px-6 text-gray-400">Standard CTA</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">Professional/Short CTA</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-gray-400 font-mono text-sm uppercase tracking-widest mb-6">Experience it first</p>
-            <div className="inline-block px-8 py-3 bg-primary/10 border border-primary/20 rounded-full text-primary font-heading text-xl">
-              7-Day Free Trial Included
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Stack */}
+      {/* Security & Privacy Section */}
       <section className="section border-t border-dark-border bg-dark-surface-low/20">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading mb-4">The Technical Stack</h2>
-            <p className="text-gray-400 font-mono text-sm uppercase tracking-widest">Built for Reliability & Scale</p>
+            <h2 className="text-4xl md:text-5xl font-heading mb-4 tracking-tight">Enterprise-Grade Security</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto font-sans">
+              Designed for professionals who demand 100% privacy and complete control over their data.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <TechItem 
-              label="Android" 
-              value="Kotlin, Jetpack Compose, Coroutines (Flow/StateFlow), Accessibility Service API" 
-            />
-            <TechItem 
-              label="Automation" 
-              value="WhatsAppAutomator (Deterministic Node-ID & Text-based interaction)" 
-            />
-            <TechItem 
-              label="Security" 
-              value="EncryptedSharedPreferences, HMAC-SHA256 Signed License Validation" 
-            />
-            <TechItem 
-              label="Backend" 
-              value="Next.js (TypeScript), PostgreSQL (Supabase), Stripe & Play Store Billing" 
-            />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 bg-dark-bg border border-dark-border rounded-2xl hover:border-primary/30 transition-all">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="text-xl font-heading mb-2">100% Private & Local</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                The agent runs <strong>entirely on your Android device</strong>. Your contacts, messages, and sales scripts never leave your hardware. No cloud storage, no third-party servers.
+              </p>
+            </div>
+            <div className="p-8 bg-dark-bg border border-dark-border rounded-2xl hover:border-primary/30 transition-all">
+              <div className="text-3xl mb-4">🛡️</div>
+              <h3 className="text-xl font-heading mb-2">Secure Local Vault</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Utilizes <strong>EncryptedSharedPreferences</strong> and AES-256 encryption to protect your local campaign data and license credentials against unauthorized access.
+              </p>
+            </div>
+            <div className="p-8 bg-dark-bg border border-dark-border rounded-2xl hover:border-primary/30 transition-all">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="text-xl font-heading mb-2">Native Automation</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Operates through the <strong>Android Accessibility API</strong>, mimicking human interaction directly within the WhatsApp interface without using high-risk, unofficial APIs.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -363,7 +324,9 @@ export default function HomePage() {
 function Pillar({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="text-left p-6 bg-dark-surface-low border border-dark-border rounded-2xl">
-      <div className="text-primary font-mono text-xs uppercase tracking-widest mb-4">// {title}</div>
+      <div className="text-primary font-mono text-xs uppercase tracking-widest mb-4">
+        {title}
+      </div>
       <h3 className="text-2xl font-heading mb-4 text-white">{title}</h3>
       <p className="text-gray-400 font-sans leading-relaxed text-sm">{desc}</p>
     </div>

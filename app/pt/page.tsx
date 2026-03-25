@@ -243,7 +243,7 @@ export default function HomePage() {
                 <tr className="border-b border-dark-border">
                   <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest">Recurso</th>
                   <th className="py-4 px-6 font-heading text-gray-400 uppercase text-sm tracking-widest">Plano Grátis</th>
-                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest bg-primary/5">Plano Premium</th>
+                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest bg-primary/5">Plano Premium (US$ 9,99/mês ou US$ 99,99/ano)</th>
                 </tr>
               </thead>
               <tbody>
@@ -254,7 +254,7 @@ export default function HomePage() {
                 </tr>
                 <tr className="border-b border-dark-border/50">
                   <td className="py-6 px-6 font-heading">Mensagens Diárias</td>
-                  <td className="py-6 px-6 text-gray-400 font-mono">40 mensagens/day</td>
+                  <td className="py-6 px-6 text-gray-400 font-mono">40 mensagens/dia</td>
                   <td className="py-6 px-6 text-primary font-heading text-xl bg-primary/5">Ilimitado</td>
                 </tr>
                 <tr className="border-b border-dark-border/50">

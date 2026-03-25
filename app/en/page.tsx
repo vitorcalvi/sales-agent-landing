@@ -243,7 +243,7 @@ export default function HomePage() {
                 <tr className="border-b border-dark-border">
                   <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest">Feature</th>
                   <th className="py-4 px-6 font-heading text-gray-400 uppercase text-sm tracking-widest">Free Tier</th>
-                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest bg-primary/5">Premium Tier</th>
+                  <th className="py-4 px-6 font-heading text-primary uppercase text-sm tracking-widest bg-primary/5">Premium Tier ($9.99/mo or $99.99/yr)</th>
                 </tr>
               </thead>
               <tbody>
@@ -280,7 +280,7 @@ export default function HomePage() {
                 <tr className="border-b border-dark-border/50">
                   <td className="py-6 px-6 font-heading">Branding</td>
                   <td className="py-6 px-6 text-gray-400">Standard CTA</td>
-                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">Professional CTA</td>
+                  <td className="py-6 px-6 text-primary bg-primary/5 font-heading">Professional/Short CTA</td>
                 </tr>
               </tbody>
             </table>

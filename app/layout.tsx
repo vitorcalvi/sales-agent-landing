@@ -7,17 +7,26 @@ export const metadata: Metadata = {
   description: 'Enterprise-grade Android ecosystem to automate and scale high-touch sales conversations directly within WhatsApp. Native deliverability, deterministic logic, and account safety first.',
   openGraph: {
     title: '247 Sales Agent — High-Performance WhatsApp Outreach',
-    description: 'Automate and scale WhatsApp sales conversations with deterministic workflow automation and accessibility-driven UI control.',
+    description: 'Automate and scale WhatsApp sales conversations with deterministic workflow automation.',
     url: 'https://247sales.dyagnosys.com',
     siteName: '247 Sales Agent',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://247sales.dyagnosys.com/api/og',
+        width: 1200,
+        height: 630,
+        alt: '247 Sales Agent - WhatsApp Automation Platform',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: '247 Sales Agent — High-Performance WhatsApp Outreach',
-    description: 'Enterprise-grade Android ecosystem to automate and scale high-touch sales conversations directly within WhatsApp.',
-  }
+    description: 'Automate and scale WhatsApp sales conversations with deterministic workflow automation.',
+    images: ['https://247sales.dyagnosys.com/api/og'],
+  },
 }
 
 export default function RootLayout({

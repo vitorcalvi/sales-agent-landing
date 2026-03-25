@@ -69,7 +69,7 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy, please contact us at:
             </p>
             <p className="text-gray-400">
-              Email: <a href="mailto:support@mindsense.ai" className="text-primary hover:underline">support@mindsense.ai</a>
+              Email: <a href="mailto:contact@dyagnosys.com" className="text-primary hover:underline">contact@dyagnosys.com</a>
             </p>
           </section>
         </div>

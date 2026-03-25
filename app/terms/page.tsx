@@ -72,7 +72,7 @@ export default function TermsPage() {
               Questions about these Terms? Contact us at:
             </p>
             <p className="text-gray-400">
-              Email: <a href="mailto:support@mindsense.ai" className="text-primary hover:underline">support@mindsense.ai</a>
+              Email: <a href="mailto:contact@dyagnosys.com" className="text-primary hover:underline">contact@dyagnosys.com</a>
             </p>
           </section>
         </div>

@@ -14,9 +14,14 @@ interface PricingTableProps {
   features: PricingFeature[];
   monthlyPrice: string;
   yearlyPrice: string;
-  currency?: string;
   trialDays?: number;
   locale?: "en" | "pt";
+}
+
+function parsePriceValue(rawPrice: string) {
+  const cleaned = rawPrice.replace(/[^\d,.-]/g, '').replace(',', '.');
+  const parsed = Number.parseFloat(cleaned);
+  return Number.isFinite(parsed) ? parsed : null;
 }
 
 export default function PricingTable({
@@ -25,11 +30,16 @@ export default function PricingTable({
   features,
   monthlyPrice,
   yearlyPrice,
-  currency = "$",
   trialDays = 7,
   locale = "en"
 }: PricingTableProps) {
-  const savingsPercent = 17;
+  const monthlyPriceValue = parsePriceValue(monthlyPrice);
+  const yearlyPriceValue = parsePriceValue(yearlyPrice);
+
+  const savingsPercent =
+    monthlyPriceValue && yearlyPriceValue
+      ? Math.max(0, Math.round((1 - yearlyPriceValue / (monthlyPriceValue * 12)) * 100))
+      : null;
 
   return (
     <section className="section bg-dark-surface-low/30 border-y border-dark-border">
@@ -73,9 +83,11 @@ export default function PricingTable({
                       <span className="text-gray-500 text-xs font-mono uppercase">
                         {locale === "pt" ? "anual" : "yearly"}
                       </span>
-                      <span className="bg-green-500/20 text-green-400 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded">
-                        -{savingsPercent}%
-                      </span>
+                      {savingsPercent !== null ? (
+                        <span className="bg-green-500/20 text-green-400 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded">
+                          -{savingsPercent}%
+                        </span>
+                      ) : null}
                     </div>
                   </div>
                 </th>

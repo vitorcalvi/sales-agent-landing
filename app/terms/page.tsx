@@ -1,3 +1,13 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service — 247 Sales Agent',
+  description: 'Terms of service for 247 Sales Agent WhatsApp automation platform. Read our usage terms and conditions.',
+  robots: {
+    index: true,
+  },
+}
+
 export default function TermsPage() {
   return (
     <div className="pt-32 pb-24">

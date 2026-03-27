@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 1
+
+Sitemap: https://247sales.dyagnosys.com/sitemap.xml

@@ -1,3 +1,13 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — 247 Sales Agent',
+  description: 'Learn how 247 Sales Agent handles your data. 100% private and local data storage with enterprise-grade security.',
+  robots: {
+    index: true,
+  },
+}
+
 export default function PrivacyPage() {
   return (
     <div className="pt-32 pb-24">

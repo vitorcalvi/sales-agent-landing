@@ -13,19 +13,27 @@ function applySecurityHeaders(response: NextResponse) {
     frame-ancestors 'none';
     base-uri 'self';
     form-action 'self';
-  `.replace(/\s{2,}/g, ' ').trim()
-  
+  `
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+
   response.headers.set('Content-Security-Policy', cspHeader)
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('X-Frame-Options', 'DENY')
   response.headers.set('X-XSS-Protection', '1; mode=block')
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), screen-wake-lock=(), sync-xhr=(), fullscreen=(), accelerometer=(), gyroscope=()')
+  response.headers.set(
+    'Permissions-Policy',
+    'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), screen-wake-lock=(), sync-xhr=(), fullscreen=(), accelerometer=(), gyroscope=()'
+  )
   response.headers.set('X-DNS-Prefetch-Control', 'off')
   response.headers.set('X-Permitted-Cross-Domain-Policies', 'none')
 
   if (process.env.NODE_ENV === 'production') {
-    response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload')
+    response.headers.set(
+      'Strict-Transport-Security',
+      'max-age=63072000; includeSubDomains; preload'
+    )
   }
 
   return response
@@ -34,14 +42,19 @@ function applySecurityHeaders(response: NextResponse) {
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname
 
-  // Redirect root to Portuguese
-  if (path === '/') {
-    const url = request.nextUrl.clone()
-    url.pathname = '/pt'
-    return applySecurityHeaders(NextResponse.redirect(url))
-  }
+  const response =
+    path === '/'
+      ? (() => {
+          const url = request.nextUrl.clone()
+          url.pathname = '/pt'
+          return NextResponse.redirect(url)
+        })()
+      : NextResponse.next()
 
-  return applySecurityHeaders(NextResponse.next())
+  const locale = path.startsWith('/pt') ? 'pt' : 'en'
+  response.headers.set('x-locale', locale)
+
+  return applySecurityHeaders(response)
 }
 
 export const config = {

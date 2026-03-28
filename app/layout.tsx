@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import Link from 'next/link'
 import './globals.css'
 import { Navbar } from './components/Navbar'
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/api/og',
+        url: `${siteUrl}/api/og/`,
         width: 1200,
         height: 630,
         alt: '247 Sales Agent - WhatsApp Automation Platform',
@@ -41,13 +42,16 @@ export const metadata: Metadata = {
     title: '247 Sales Agent — High-Performance WhatsApp Outreach',
     description:
       'Automate and scale WhatsApp sales conversations with deterministic workflow automation.',
-    images: ['/api/og'],
+    images: [`${siteUrl}/api/og/`],
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers()
+  const locale = headersList.get('x-locale') || 'en'
+
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -364,8 +364,8 @@ function FeatureCard({ title, body, icon }: { title: string; body: string; icon:
 
 function ScreenCard({ screen, isMain }: { screen: Record<string, unknown>; isMain?: boolean }) {
   return (
-    <div className={`relative group ${isMain ? 'md:-mt-16' : ''}`}>
-      <div className="absolute inset-0 bg-primary/20 blur-xl rounded-[3rem] group-hover:bg-primary/30 transition-all duration-500" />
+    <div className={`relative ${isMain ? 'md:-mt-16' : ''}`}>
+      <div className="absolute inset-0 bg-primary/20 blur-xl rounded-[3rem]" />
       <div
         className={`relative bg-dark-bg ${isMain ? 'border-primary/30' : 'border-dark-border'} border rounded-[2.5rem] overflow-hidden aspect-[9/19] shadow-2xl ${isMain ? 'transform scale-105 z-10' : ''}`}
       >
@@ -377,9 +377,6 @@ function ScreenCard({ screen, isMain }: { screen: Record<string, unknown>; isMai
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
-          <span className="text-white font-heading text-xl">{screen.hoverText as string}</span>
-        </div>
       </div>
       <div className="text-center mt-6">
         <h3 className="text-xl font-heading text-white mb-2">{screen.title as string}</h3>

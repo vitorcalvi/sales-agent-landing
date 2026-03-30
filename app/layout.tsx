@@ -6,7 +6,7 @@ import { Navbar } from './components/Navbar'
 import { JsonLd } from './components/JsonLd'
 import { SkipLink } from './components/SkipLink'
 
-const siteUrl = 'https://247sales.dyagnosys.com'
+const siteUrl = 'https://247.dyagnosys.com'
 
 export const viewport: Viewport = {
   width: 'device-width',

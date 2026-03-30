@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { HomePageContent } from '../components/HomePageContent'
 import { METADATA } from '@/lib/content'
 
-const siteUrl = 'https://247sales.dyagnosys.com'
+const siteUrl = 'https://247.dyagnosys.com'
 
 export const metadata: Metadata = {
   title: METADATA.en.title,

@@ -23,7 +23,7 @@ const jsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Mindsense Products',
-    url: 'https://247sales.dyagnosys.com',
+    url: 'https://247.dyagnosys.com',
   },
 }
 

@@ -481,7 +481,7 @@ export const METADATA = {
       'Send 100+ WhatsApp messages daily without getting banned. Native deliverability, zero per-message cost, account protection built-in.',
     ogTitle: '247 Sales Agent — WhatsApp Automation That Actually Works',
     ogDescription:
-      'Automate WhatsApp sales with native deliverability and zero per-message fees. Built-in account protection keeps you safe while scaling. Start free today.',
+      'Automate WhatsApp sales. Native deliverability, zero per-message fees. Built-in account protection keeps you safe. Start free today.',
     locale: 'en_US',
   },
   pt: {
@@ -490,7 +490,7 @@ export const METADATA = {
       'Envie 100+ mensagens WhatsApp por dia sem ser bloqueado. Entregabilidade nativa, custo zero por mensagem, proteção da conta garantida.',
     ogTitle: '247 Sales Agent — Automação de WhatsApp Segura e Eficaz',
     ogDescription:
-      'Automatize vendas no WhatsApp com entregabilidade nativa e custo zero por mensagem. Proteção integrada da conta mantém você seguro enquanto escala. Comece grátis hoje.',
+      'Automatize vendas no WhatsApp. Entregabilidade nativa, custo zero por mensagem. Proteção integrada mantém você seguro. Comece grátis hoje.',
     locale: 'pt_BR',
   },
 } as const

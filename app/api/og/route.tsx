@@ -17,124 +17,172 @@ export async function GET(request: NextRequest) {
   const description = searchParams.get('description') || 'High-Performance WhatsApp Outreach'
 
   const response = new ImageResponse(
-    (
+    <div
+      style={{
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: brandColors.darkBg,
+        padding: '64px',
+        position: 'relative',
+      }}
+    >
+      {/* Border glow effect */}
       <div
         style={{
-          height: '100%',
-          width: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          border: `2px solid ${brandColors.primary}`,
+          borderRadius: '16px',
+          opacity: 0.3,
+        }}
+      />
+
+      {/* Logo Badge */}
+      <div
+        style={{
           display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: brandColors.darkBg,
-          padding: '64px',
-          position: 'relative',
+          alignItems: 'center',
+          marginBottom: '48px',
         }}
       >
-        {/* Border glow effect */}
         <div
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            border: `2px solid ${brandColors.primary}`,
-            borderRadius: '16px',
-            opacity: 0.3,
+            width: '72px',
+            height: '72px',
+            borderRadius: '50%',
+            backgroundColor: brandColors.primary,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginRight: '20px',
           }}
-        />
+        >
+          <span
+            style={{
+              fontSize: '32px',
+              fontWeight: 700,
+              color: brandColors.darkBg,
+              fontFamily: 'Inter',
+            }}
+          >
+            247
+          </span>
+        </div>
+        <span
+          style={{
+            fontSize: '42px',
+            fontWeight: 700,
+            color: '#ffffff',
+            fontFamily: 'Inter',
+            letterSpacing: '-0.02em',
+          }}
+        >
+          Sales Agent
+        </span>
+      </div>
 
-        {/* Logo Badge */}
+      {/* Main Title */}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: 1,
+        }}
+      >
+        <h1
+          style={{
+            fontSize: title.length > 40 ? '52px' : '64px',
+            fontWeight: 700,
+            color: '#ffffff',
+            fontFamily: 'Inter',
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            marginBottom: '24px',
+          }}
+        >
+          {title.length > 100 ? `${title.slice(0, 97)}...` : title}
+        </h1>
+
+        {/* Description */}
+        <p
+          style={{
+            fontSize: '28px',
+            color: brandColors.primary,
+            fontFamily: 'Inter',
+            margin: 0,
+            maxWidth: '900px',
+            lineHeight: 1.4,
+          }}
+        >
+          {description.length > 150 ? `${description.slice(0, 147)}...` : description}
+        </p>
+      </div>
+
+      {/* CTA Button */}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '32px',
+        }}
+      >
+        <div
+          style={{
+            backgroundColor: brandColors.primary,
+            color: brandColors.darkBg,
+            padding: '16px 48px',
+            borderRadius: '12px',
+            fontSize: '24px',
+            fontWeight: 700,
+            fontFamily: 'Inter',
+            letterSpacing: '0.02em',
+            boxShadow: `0 4px 20px rgba(145, 255, 176, 0.3)`,
+          }}
+        >
+          Start Free Today
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          borderTop: `1px solid ${brandColors.border}`,
+          paddingTop: '32px',
+          marginTop: '48px',
+        }}
+      >
+        <span
+          style={{
+            fontSize: '22px',
+            color: '#9ca3af',
+            fontFamily: 'Inter',
+          }}
+        >
+          247.dyagnosys.com
+        </span>
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            marginBottom: '48px',
+            gap: '12px',
           }}
         >
           <div
             style={{
-              width: '72px',
-              height: '72px',
+              width: '12px',
+              height: '12px',
               borderRadius: '50%',
               backgroundColor: brandColors.primary,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginRight: '20px',
             }}
-          >
-            <span
-              style={{
-                fontSize: '32px',
-                fontWeight: 700,
-                color: brandColors.darkBg,
-                fontFamily: 'Inter',
-              }}
-            >
-              247
-            </span>
-          </div>
-          <span
-            style={{
-              fontSize: '42px',
-              fontWeight: 700,
-              color: '#ffffff',
-              fontFamily: 'Inter',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            Sales Agent
-          </span>
-        </div>
-
-        {/* Main Title */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            flex: 1,
-          }}
-        >
-          <h1
-            style={{
-              fontSize: title.length > 40 ? '52px' : '64px',
-              fontWeight: 700,
-              color: '#ffffff',
-              fontFamily: 'Inter',
-              lineHeight: 1.1,
-              letterSpacing: '-0.02em',
-              marginBottom: '24px',
-            }}
-          >
-            {title.length > 100 ? `${title.slice(0, 97)}...` : title}
-          </h1>
-
-          {/* Description */}
-          <p
-            style={{
-              fontSize: '28px',
-              color: brandColors.primary,
-              fontFamily: 'Inter',
-              margin: 0,
-              maxWidth: '900px',
-              lineHeight: 1.4,
-            }}
-          >
-            {description.length > 150 ? `${description.slice(0, 147)}...` : description}
-          </p>
-        </div>
-
-        {/* Bottom Bar */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            borderTop: `1px solid ${brandColors.border}`,
-            paddingTop: '32px',
-            marginTop: '48px',
-          }}
-        >
+          />
           <span
             style={{
               fontSize: '22px',
@@ -142,36 +190,11 @@ export async function GET(request: NextRequest) {
               fontFamily: 'Inter',
             }}
           >
-            247.dyagnosys.com
+            WhatsApp Automation
           </span>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-            }}
-          >
-            <div
-              style={{
-                width: '12px',
-                height: '12px',
-                borderRadius: '50%',
-                backgroundColor: brandColors.primary,
-              }}
-            />
-            <span
-              style={{
-                fontSize: '22px',
-                color: '#9ca3af',
-                fontFamily: 'Inter',
-              }}
-            >
-              WhatsApp Automation
-            </span>
-          </div>
         </div>
       </div>
-    ),
+    </div>,
     {
       width: 1200,
       height: 630,

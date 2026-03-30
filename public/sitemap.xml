@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://247sales.dyagnosys.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://247sales.dyagnosys.com/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://247sales.dyagnosys.com/pt"/>
+    <loc>https://247.dyagnosys.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://247.dyagnosys.com/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://247.dyagnosys.com/pt"/>
     <lastmod>2025-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://247sales.dyagnosys.com/pt</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://247sales.dyagnosys.com/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://247sales.dyagnosys.com/pt"/>
+    <loc>https://247.dyagnosys.com/pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://247.dyagnosys.com/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://247.dyagnosys.com/pt"/>
     <lastmod>2025-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://247sales.dyagnosys.com/privacy</loc>
+    <loc>https://247.dyagnosys.com/privacy</loc>
     <lastmod>2025-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://247sales.dyagnosys.com/terms</loc>
+    <loc>https://247.dyagnosys.com/terms</loc>
     <lastmod>2025-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -1,8 +1,9 @@
 export const SITE_CONFIG = {
   name: '247 Sales Agent',
-  url: 'https://247sales.dyagnosys.com',
+  url: 'https://247.dyagnosys.com',
   version: '1.0.8',
-  apkUrl: 'https://github.com/vitorcalvi/sales-agent-releases/releases/latest/download/app-release.apk',
+  apkUrl:
+    'https://github.com/vitorcalvi/sales-agent-releases/releases/latest/download/app-release.apk',
   contact: {
     email: 'contact@dyagnosys.com',
     github: 'https://github.com/vitorcalvi/sales-agent-releases',

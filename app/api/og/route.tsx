@@ -142,7 +142,7 @@ export async function GET(request: NextRequest) {
               fontFamily: 'Inter',
             }}
           >
-            247sales.dyagnosys.com
+            247.dyagnosys.com
           </span>
           <div
             style={{
@@ -178,6 +178,7 @@ export async function GET(request: NextRequest) {
     }
   )
 
+  response.headers.set('Content-Type', 'image/png')
   response.headers.set('Cache-Control', 'public, max-age=86400, s-maxage=3600')
   response.headers.set('CDN-Cache-Control', 'public, max-age=3600')
 

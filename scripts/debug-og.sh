@@ -5,7 +5,7 @@
 
 set -e
 
-PRODUCTION_URL="https://247sales.dyagnosys.com"
+PRODUCTION_URL="https://247.dyagnosys.com"
 LOCAL_URL="http://localhost:3000"
 
 echo "🔍 OG Image Debug Script"

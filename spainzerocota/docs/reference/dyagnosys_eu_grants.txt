@@ -1,0 +1,91 @@
+EUROPEAN GRANTS RECOMMENDATIONS FOR DYAGNOSYS (www.dyagnosys.com)
+Generated: March 25, 2026
+================================================================
+
+COMPANY PROFILE
+---------------
+Dyagnosys is an AI-powered workplace mental health platform detecting stress and 
+burnout via on-device AI biometric analysis. B2B-focused (sold to HR teams), 
+GDPR-compliant with no personal data leaving the device.
+
+⚠️ FIRST STEP: EU ENTITY REGISTRATION
+---------------------------------------
+Most EU and Spanish grants require a company registered within the EU.
+Establishing a Spanish SL (Sociedad Limitada) in Sitges, Spain would unlock all
+programs below. Registration takes as little as 1-2 weeks via the CIRCE system.
+
+
+TOP PRIORITY GRANTS FOR DYAGNOSYS
+===================================
+
+1. NEOTEC 2026 — CDTI Spain 🚨 DEADLINE: APRIL 1, 2026
+--------------------------------------------------------
+- Amount: Up to €325,000 non-repayable (no equity, no repayment)
+- Eligibility: Spanish-registered tech startup, 6 months to 3 years old, min. €20K share capital
+- Fit: On-device AI + healthcare use case + proprietary algorithm aligns perfectly
+- Boost: Hiring a PhD in AI/health increases grant ceiling from €250K → €325K
+- ⚡ URGENT — Only days remaining to apply
+- URL: https://programa-neotec.es/neotec-2026/
+
+2. EIC Accelerator 2026 — European Innovation Council
+------------------------------------------------------
+- Amount: Up to €2.5M grant + optional €10M equity investment
+- Next cut-off: ~June 2026 (short application first, then full proposal)
+- Fit: On-device AI for workplace wellbeing — health + deeptech mandate
+- Key differentiator: Privacy-first on-device AI with zero cloud uploads
+- URL: https://eic.ec.europa.eu
+
+3. Horizon Europe Health Cluster — HORIZON-HLTH-2026
+-----------------------------------------------------
+- Amount: Up to €2.25M per project
+- Focus: AI-driven health tools, digital mental health interventions, preventive care
+- Structure: Requires a consortium of 3+ organizations from different EU countries
+  (Dyagnosys can lead with academic/clinical partners)
+- URL: https://ec.europa.eu/info/funding-tenders/opportunities/portal
+
+4. Future of Health Grant 2026
+-------------------------------
+- Fit: Directly targets AI-based mental health platforms, preventive care models,
+  and GDPR-aligned data tools
+- Past winners include AI anxiety/CBT platforms similar to Dyagnosys's profile
+
+5. ENISA (Spain) — Participative Loans
+---------------------------------------
+- Amount: €25K–€1.5M (participative loan, not pure grant)
+- Type: Soft loan, rolling deadline
+- URL: https://www.enisa.es
+
+
+GRANT FIT MATRIX
+=================
+Grant               | Amount        | Repayable         | EU Entity  | Urgency
+--------------------|---------------|-------------------|------------|-------------------
+NEOTEC (Spain)      | €325K         | Non-repayable     | Yes (Spain)| 🔴 Apr 1, 2026
+EIC Accelerator     | €2.5M + equity| Grant part no     | Yes (EU)   | 🟡 ~Jun 2026
+Horizon Health      | €2.25M        | Non-repayable     | Yes (EU)   | 🟡 Rolling
+Future of Health    | Varies        | Non-repayable     | Preferred  | 🟢 Open
+ENISA (Spain)       | €25K–€1.5M    | Participative loan| Yes (Spain)| 🟢 Rolling
+
+
+STRATEGIC RECOMMENDATION
+==========================
+1. Immediately incorporate a Spanish SL in Sitges to establish EU presence
+2. Rush NEOTEC 2026 application before April 1 — fastest non-dilutive cash (€250K–€325K)
+3. Prepare an EIC Accelerator short-form in parallel for the June 2026 window,
+   leveraging the on-device/privacy angle as the core innovation
+4. Build a Horizon Europe consortium with a Spanish university (e.g., UPC Barcelona, UAB)
+   for the mental health digital tools call
+
+KEY DIFFERENTIATOR FOR ALL APPLICATIONS:
+Privacy-first, on-device AI architecture is a major selling point under EU's GDPR
+and AI Act compliance requirements for health data.
+
+
+USEFUL PORTALS
+===============
+- EU Funding & Tenders Portal: https://ec.europa.eu/info/funding-tenders/opportunities/portal
+- EIC Apply Platform:          https://eic.ec.europa.eu
+- CDTI NEOTEC (Spain):         https://www.cdti.es/en/ayudas/neotec
+- ENISA (Spain):               https://www.enisa.es
+- GrantsFinder EU:             https://www.grantsfinder.eu/blog/eu-grants-for-startups-2026
+- Dyagnosys Website:           https://www.dyagnosys.com

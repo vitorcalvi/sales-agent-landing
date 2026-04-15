@@ -5,6 +5,7 @@ import './globals.css'
 import { Navbar } from './components/Navbar'
 import { JsonLd } from './components/JsonLd'
 import { SkipLink } from './components/SkipLink'
+import Analytics from './components/Analytics'
 
 const siteUrl = 'https://247.dyagnosys.com'
 
@@ -57,6 +58,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen bg-dark-bg text-white selection:bg-primary selection:text-dark-bg">
+        <Analytics />
         <JsonLd />
         <SkipLink />
         <Navbar />

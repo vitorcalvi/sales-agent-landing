@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Sales Agent</string>
-    <string name="accessibility_service_description">Automates WhatsApp sales conversations through the 6-stage pipeline.</string>
-</resources>
